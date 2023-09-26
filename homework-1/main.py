@@ -6,12 +6,12 @@ import csv
 employees_data = os.path.join('north_data', 'employees_data.csv')
 customers_data = os.path.join('north_data', 'customers_data.csv')
 orders_data = os.path.join('north_data', 'orders_data.csv')
-
+password = input("Enter the password for user postgres ")
 connect_to_db = psycopg2.connect(
     host="localhost",
     database="north",
     user="postgres",
-    password="*************"
+    password=password
 )
 with connect_to_db:
     with connect_to_db.cursor() as cursor:
